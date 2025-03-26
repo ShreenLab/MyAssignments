@@ -8,14 +8,7 @@ import pages.LoginPage;
 public class LoginTC001 extends ProjectSpecificMethods{
 	@Test
 	public void runCreateAccount() {
-		new LoginPage().enterUserName().enterPassword().clickLogin()
-		.clickCRM()
-		.clickAccounts()
-		.clickCreateAccount()
-		.accountName()
-		.descriptionName()
-		.noOfEmployees()
-		.officialSiteName().clickSave().viewAccount();
+		new LoginPage().enterUserName().enterPassword().clickLogin();
 
 	}
 

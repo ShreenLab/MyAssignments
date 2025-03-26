@@ -3,30 +3,34 @@ package pages;
 import org.openqa.selenium.By;
 
 import base.ProjectSpecificMethods;
+import io.cucumber.java.en.When;
 
 public class CreateAccountPage extends ProjectSpecificMethods {
-
+	@When("the user enters account name as")
 	public CreateAccountPage accountName(){
-		driver.findElement(By.id("accountName")).sendKeys("Shreen");
+		getDriver().findElement(By.id("accountName")).sendKeys("Shreen");
 		return this;
 	}
+	@When("the user enters the description as")
 	public CreateAccountPage descriptionName() {
 		
-	    driver.findElement(By.name("description")).sendKeys("Selenium Automation Tester");
+	    getDriver().findElement(By.name("description")).sendKeys("Selenium Automation Tester");
 	    return this;
 	}
+	@When("the user enters no of eployees as")
 	public CreateAccountPage noOfEmployees() {
-	    driver.findElement(By.id("numberEmployees")).sendKeys("7");
+	    getDriver().findElement(By.id("numberEmployees")).sendKeys("7");
 	    return this;
 	}
+	@When("the user enters official site name as")
 	public CreateAccountPage officialSiteName() {
-		driver.findElement(By.id("officeSiteName")).sendKeys("LeafTaps");
+		getDriver().findElement(By.id("officeSiteName")).sendKeys("LeafTaps");
 		return this;
 	}
+	@When("the user click submit button")
 	public ViewAccountPage clickSave()
 	{
-	
-		driver.findElement(By.className("smallSubmit")).click();
+		getDriver().findElement(By.className("smallSubmit")).click();
 		return new ViewAccountPage();
 
 	}
